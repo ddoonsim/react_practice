@@ -26,6 +26,7 @@ dl, dt, dd, li {
 }
 main {
   background: #f1f3fa;
+  padding-top: 80px;
 }
 
 /* 공통 여백 */
