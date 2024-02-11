@@ -6,18 +6,21 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async'; // pageTitle 설정
 import ErrorPage from './pages/commons/ErrorPage'; // 에러 발생 시 노출되는 컴포넌트
 import reportWebVitals from './reportWebVitals';
+import { UserProvider } from './modules/user';
 import './i18n'; // 다국어 설정
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <ErrorPage>
-          <App />
-        </ErrorPage>
-      </BrowserRouter>
-    </HelmetProvider>
+    <UserProvider>
+      <HelmetProvider>
+        <BrowserRouter>
+          <ErrorPage>
+            <App />
+          </ErrorPage>
+        </BrowserRouter>
+      </HelmetProvider>
+    </UserProvider>
   </React.StrictMode>,
 );
 

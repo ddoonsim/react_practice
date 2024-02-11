@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import classNames from '../../../node_modules/classnames/index';
 import colorNames from '../../styles/colors';
 
-const { primary } = colorNames;
+const { info } = colorNames;
 
 const OuterBox = styled.header`
   background: #fff;
@@ -13,21 +13,26 @@ const OuterBox = styled.header`
   align-items: center;
   height: 80px;
   padding: 0 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 
   .right {
     a {
       display: inline-block;
-      border: 1px solid ${primary};
+      border: 1px solid ${info};
       width: 90px;
       height: 28px;
       border-radius: 3px;
       line-height: 26px;
-      color: ${primary};
+      color: ${info};
       text-align: center;
       margin-left: 5px;
 
       &.on {
-        background: ${primary};
+        background: ${info};
         color: #fff;
       }
     }
