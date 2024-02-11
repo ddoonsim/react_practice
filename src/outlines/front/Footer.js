@@ -1,5 +1,11 @@
+import styled from 'styled-components';
+
+const OuterBox = styled.footer``;
+
 const Footer = () => {
-  return <h1>푸터</h1>;
+  return (
+    <OuterBox>푸더</OuterBox>
+  );
 };
 
 export default Footer;
